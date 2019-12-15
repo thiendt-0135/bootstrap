@@ -5,55 +5,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="./img/logo.png" />
   <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
   <link rel="stylesheet" href="css/helper.css">
   <link rel="stylesheet" href="css/main.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>bootstrap</title>
+  <title>Project demo</title>
 </head>
 
 <body>
-  <header class="container-fluid header">
-    <div class="header__box js-header-box">
-      <h1 class="logo"><img src="img/logo.png" alt="logo"></h1>
-      <nav class="menu">
-        <button class="btn-open js-btn-open"><i class="fas fa-bars"></i></button>
-        <ul class="nav js-menu">
-          <li class="nav__item nav__item--close js-close"><i class="fa fa-times"></i></li>
-          <li class="nav__item"><a class="nav__link" href="#">home</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">about</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">work</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">process</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">service</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">testimonials</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">contact</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="banner">
-      <h3 class="banner__title">We Design and Develop</h3>
-      <div class="banner__desc js-banner-desc">We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps.</div>
-      <button class="banner__button">contact us</button>
+  <!-- Header -->
+  <header class="header">
+    <div class="wrapper">
+      <div class="container-fluid header__box js-header-box">
+        <h1 class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></h1>
+        <nav class="menu">
+          <button class="btn-open js-btn-open"><i class="fas fa-bars"></i></button>
+          <ul class="nav js-menu">
+            <li class="nav__item nav__item--close js-close"><i class="fa fa-times"></i></li>
+            <li class="nav__item"><a class="nav__link nav__link--active" href="#">home</a></li>
+            <li class="nav__item"><a class="nav__link" href="about.html">about</a></li>
+            <li class="nav__item"><a class="nav__link" href="project.html">work</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">process</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">service</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">testimonials</a></li>
+            <li class="nav__item"><a class="nav__link" href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="banner">
+        <h3 class="banner__title">We Design and Develop</h3>
+        <div class="banner__desc js-banner-desc">We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps.</div>
+        <button class="banner__button">contact us</button>
+      </div>
     </div>
   </header>
-  <section class="container-fluid about-us">
-    <h2 class="row about-us__title">
-      About Us
-    </h2>
-    <div class="row about-us__desc">
-      Divide have don't man wherein air fourth. Own itself make have night won't make. A you under Seed appear which good give. Own give air without fowl moveth dry first heaven fruit, dominion she'd won't very all.
-    </div>
-    <div class="row about-us__signature">
-      <img src="img/signiture.png" alt="signiture">
+  <!-- about-us -->
+  <section class="about-us">
+    <div class="container-fluid">
+      <h2 class="row about-us__title">
+        About Us
+      </h2>
+      <div class="row about-us__desc">
+        Divide have don't man wherein air fourth. Own itself make have night won't make. A you under Seed appear which good give. Own give air without fowl moveth dry first heaven fruit, dominion she'd won't very all.
+      </div>
+      <div class="row about-us__signature">
+        <img src="img/signiture.png" alt="signiture">
+      </div>
     </div>
   </section>
+  <!-- Skill -->
   <section class="skill js-skill">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xl-6 col-lg-6 col-md-12 skill__content">
+        <div class="col-xl-6 col-lg-6 col-md-6 skill__content">
           <h2 class="skill__title">Professional Skills</h2>
           <div class="row">
             <div class="col-xl-12">
@@ -74,10 +80,11 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-12 skill__image"><img src="img/bg-2.jpg" class="image" alt="skill image"></div>
+        <div class="col-xl-6 col-lg-6 col-md-6 skill__image"><img src="img/bg-2.jpg" class="image" alt="skill image"></div>
       </div>
     </div>
   </section>
+  <!-- numbers -->
   <section class="numbers">
     <div class="container-fluid">
       <div class="row">
@@ -85,86 +92,87 @@
           <i class="pe-7s-portfolio numbers__icon"></i>
           <div class="numbers__content">
             <p class="numbers__total">548</p>
-            <p class="numbers__info">projects completed</p>
+            <p class="numbers__info text-capitalize">projects completed</p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 numbers__item">
           <i class="pe-7s-clock numbers__icon"></i>
           <div class="numbers__content">
             <p class="numbers__total">548</p>
-            <p class="numbers__info">projects completed</p>
+            <p class="numbers__info text-uppercase">projects completed</p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 numbers__item">
           <i class="pe-7s-star numbers__icon"></i>
           <div class="numbers__content">
             <p class="numbers__total">548</p>
-            <p class="numbers__info">projects completed</p>
+            <p class="numbers__info text-uppercase">projects completed</p>
           </div>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 numbers__item">
           <i class="pe-7s-like numbers__icon"></i>
           <div class="numbers__content">
             <p class="numbers__total">548</p>
-            <p class="numbers__info">projects completed</p>
+            <p class="numbers__info text-uppercase">projects completed</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- work -->
   <section class="work">
     <div class="container-fluid">
       <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 work__item">
           <img src="img/home1.jpg" class="work__image" alt="work">
-          <i class="pe-7s-look work__icon"></i>
+          <a href="#"><i class="pe-7s-look work__icon"></i></a>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 work__item">
           <img src="img/home11.jpg" class="work__image" alt="work">
-          <i class="pe-7s-look work__icon"></i>
+          <a href="#"><i class="pe-7s-look work__icon"></i></a>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 work__item">
           <img src="img/home3.jpg" class="work__image" alt="work">
-          <i class="pe-7s-look work__icon"></i>
+          <a href="#"><i class="pe-7s-look work__icon"></i></a>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 work__item">
           <img src="img/home4.jpg" class="work__image" alt="work">
-          <i class="pe-7s-look work__icon"></i>
+          <a href="#"><i class="pe-7s-look work__icon"></i></a>
         </div>
       </div>
       <div class="row">
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 work__item">
           <img src="img/home5.jpg" class="work__image" alt="work">
-          <i class="pe-7s-look work__icon"></i>
+          <a href="#"><i class="pe-7s-look work__icon"></i></a>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 work__item">
           <img src="img/home10.jpg" class="work__image" alt="work">
-          <i class="pe-7s-look work__icon"></i>
+          <a href="#"><i class="pe-7s-look work__icon"></i></a>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 work__item">
           <img src="img/home7.jpg" class="work__image" alt="work">
-          <i class="pe-7s-look work__icon"></i>
+          <a href="#"><i class="pe-7s-look work__icon"></i></a>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 work__item">
           <img src="img/home8.jpg" class="work__image" alt="work">
-          <i class="pe-7s-look work__icon"></i>
+          <a href="#"><i class="pe-7s-look work__icon"></i></a>
         </div>
       </div>
       <div class="work__load-more"><a href="#" class="work__link">load more work</a></div>
     </div>
   </section>
+  <!-- Our-work-process -->
   <section class="our-work-process">
     <div class="container">
       <h2 class="our-work-process__title">Our Work Process</h2>
       <div class="our-work-process__desc">Was years it seasons was there form he in in them together over that, third sixth gathered female creeping bearing behold years.</div>
       <div class="our-work-process__video">
-        <video src="video/work-process.mp4" width="100%" id="play-video" width="100%"></video>
-        <div class="play-icon">
-          <img src="img/play-icon.png" alt="Play" >
-        </div>
+        <video src="video/work-process.mp4" muted="muted" class="video js-video" id="js-play-video"></video>
+        <button class="play-icon js-play-icon"><i class="fas fa-play"></i></button>
       </div>
     </div>
   </section>
+  <!-- Service -->
   <section class="service">
     <div class="container">
       <div class="row">
@@ -198,37 +206,38 @@
         </div>
       </div>
       <div class="row">
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 service__item">
-            <a href="#" class="service__link">
-              <i class="pe-7s-plane service__icon"></i>
-              <h3 class="service__item-title">SEO / marketing</h3>
-            </a>
-            <p class="service__item-desc">Give won't after land fill creeping meat you, may</p>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 service__item">
-            <a href="#" class="service__link">
-              <i class="pe-7s-star service__icon"></i>
-              <h3 class="service__item-title">photography</h3>
-            </a>
-            <p class="service__item-desc">Creepeth one seas cattle grass give moving saw give</p>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 service__item">
-            <a href="#" class="service__link">
-              <i class="pe-7s-magic-wand service__icon"></i>
-              <h3 class="service__item-title">graphic design</h3>
-            </a>
-            <p class="service__item-desc">Open, great whales air rule for, fourth life whales</p>
-          </div>
-          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 service__item">
-            <a href="#" class="service__link">
-              <i class="pe-7s-paint-bucket service__icon"></i>
-              <h3 class="service__item-title">illustrations</h3>
-            </a>
-            <p class="service__item-desc">Whales likeness hath, man kind for them air two won't</p>
-          </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 service__item">
+          <a href="#" class="service__link">
+            <i class="pe-7s-plane service__icon"></i>
+            <h3 class="service__item-title">SEO / marketing</h3>
+          </a>
+          <p class="service__item-desc">Give won't after land fill creeping meat you, may</p>
         </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 service__item">
+          <a href="#" class="service__link">
+            <i class="pe-7s-star service__icon"></i>
+            <h3 class="service__item-title">photography</h3>
+          </a>
+          <p class="service__item-desc">Creepeth one seas cattle grass give moving saw give</p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 service__item">
+          <a href="#" class="service__link">
+            <i class="pe-7s-magic-wand service__icon"></i>
+            <h3 class="service__item-title">graphic design</h3>
+          </a>
+          <p class="service__item-desc">Open, great whales air rule for, fourth life whales</p>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 service__item">
+          <a href="#" class="service__link">
+            <i class="pe-7s-paint-bucket service__icon"></i>
+            <h3 class="service__item-title">illustrations</h3>
+          </a>
+          <p class="service__item-desc">Whales likeness hath, man kind for them air two won't</p>
+        </div>
+      </div>
     </div>
   </section>
+  <!-- testimonials -->
   <section class="testimonials">
     <div class="container-fluid">
       <div id="demo" class="carousel slide " data-ride="false">
@@ -242,19 +251,19 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="testimonials__detail">
-              <div class="testimonials__desc">"Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am looking forward to start the next one asap."</div>
+              <div class="testimonials__desc">&ldquo; Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am looking forward to start the next one asap. &rdquo;</div>
               <div class="testimonials__author">Michael Hopkins</div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="testimonials__detail">
-              <div class="testimonials__desc">"Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am looking forward to start the next one asap."</div>
+              <div class="testimonials__desc">&ldquo; Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am looking forward to start the next one asap. &rdquo;</div>
               <div class="testimonials__author">Michael Hopkins</div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="testimonials__detail">
-              <div class="testimonials__desc">"Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am looking forward to start the next one asap."</div>
+              <div class="testimonials__desc">&ldquo; Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first project and am looking forward to start the next one asap. &rdquo;</div>
               <div class="testimonials__author">Michael Hopkins</div>
             </div>
           </div>
@@ -262,47 +271,51 @@
       </div>
     </div>
   </section>
+  <!-- Clients -->
   <section class="clients">
     <div class="container">
       <div class="row">
-        <div class="col-xl-2 col-md-2 clients__item">
+        <div class="col-md-2 col-4 clients__item">
           <a href="#"><img src="img/client-1.png" alt="client"></a>
         </div>
-        <div class="col-xl-3 col-md-3 clients__item">
+        <div class="col-md-3 col-4 clients__item">
           <a href="#"><img src="img/client-2.png" alt="client"></a>
         </div>
-        <div class="col-xl-2 col-md-2 clients__item">
+        <div class="col-md-2 col-4 clients__item">
           <a href="#"><img src="img/client-3.png" alt="client"></a>
         </div>
-        <div class="col-xl-3 col-md-3 clients__item">
+        <div class="col-md-3 col-4 offset-2 offset-md-0 clients__item">
           <a href="#"><img src="img/client-4.png" alt="client"></a>
         </div>
-        <div class="col-xl-2 col-md-2 clients__item">
+        <div class="col-md-2 col-4 clients__item">
           <a href="#"><img src="img/client-5.png" alt="client"></a>
         </div>
+      </div>
     </div>
   </section>
+  <!-- Form-contact -->
   <section class="contact">
     <div class="container-fluid wrapper">
       <div class="contact__title">Need a Project</div>
       <div class="contact__text">Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.</div>
-      <form action="" class="contact__form">
+      <form action="#" class="contact__form">
         <div class="contact__form-group">
-          <input type="text" placeholder="Your Name" class="input input-name"></input>
-          <input type="text" placeholder="Your Email" class="input input-email"></input>
+          <input type="text" placeholder="Your Name" class="input input-name" />
+          <input type="text" placeholder="Your Email" class="input input-email" />
         </div>
-        <input type="text" placeholder="Your Title" class="input input-title"></input>
+        <input type="text" placeholder="Your Title" class="input input-title" />
         <textarea class="input comment" placeholder="Your Comment"></textarea>
         <button class="contact__btn" type="submit">send message</button>
       </form>
     </div>
   </section>
+  <!-- Footer -->
   <section class="footer">
     <div class="container">
       <div class="row">
         <div class="col-xl-4 col-md-6 col-sm-6 col-12 copyright">
           <h4>Piroll Design, Inc.</h4>
-          <p>&copy 2017 Piroll. All rights reserved. Designed by robirurk.</p>
+          <p>&copy; 2017 Piroll. All rights reserved. Designed by robirurk.</p>
         </div>
         <div class="col-xl-3 col-md-6 col-sm-6 col-12 our-address">
           <a href="mailto:hello@pirolltheme.com" class="mail" target="_top">hello@pirolltheme.com</a>
@@ -338,6 +351,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/line-cutter.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/master.js"></script>
 </body>
 

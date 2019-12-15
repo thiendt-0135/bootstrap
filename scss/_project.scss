@@ -1,0 +1,120 @@
+.project {
+  $this : '.project';
+  position: relative;
+
+  &__image {
+    transform: translate(100%);
+    transition: all 1s cubic-bezier(.7, 0, .3, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &-wrap {
+      height: 100%;
+      width: 100%;
+      margin-left: 100%;
+    }
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding: 65px 80px 50px 80px;
+    background-color: $color-grey;
+    transform: translate(-100%);
+    transition: all 1s cubic-bezier(.7, 0, .3, 1);
+  }
+
+  .slick-active {
+    #{$this}__content {
+      background-color: $color-grey;
+      transform: translate(0%);
+    }
+
+    #{$this}__image {
+      padding: 0;
+      transform: translate(0);
+    }
+  }
+
+  &__title {
+    @include format-text ($font-Myriad-Pro-Regular, 38px, $color-black, 84px);
+  }
+
+  &__text {
+    @include format-text ($font-Myriad-Pro-Regular, 16px, $color-black, 24px);
+  }
+
+  .info {
+    @include format-text ($font-NunitoSans-Regular, 16px, $color-black, 30px);
+  }
+
+  .control {
+    line-height: 84px;
+    padding: 0;
+  }
+
+  .btn-control {
+    background: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .next-arrow {
+    background: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-size: 12px;
+    float: left;
+    right: 0;
+    text-transform: uppercase;
+    line-height: 84px;
+    z-index: 1;
+  }
+
+  .prev-arrow {
+    background: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-size: 12px;
+    float: right;
+    left: 0;
+    text-transform: uppercase;
+    line-height: 84px;
+    z-index: 1;
+  }
+
+  .custom-dots {
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: 0;
+    flex-wrap: wrap;
+    width: 16px;
+    padding: 0;
+
+    li {
+      padding: 1px;
+    }
+
+    .dot {
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: $color-black;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.about-banner {
+  position: relative;
+  background-color: $color-black;
+
+  &__image {
+    width: 100%;
+    opacity: .7;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    @include format-text ($font-Myriad-Pro-Regular, 38px, $color-white, 48px);
+  }
+
+  &__desc {
+    @include format-text ($font-Myriad-Pro-Regular, 18px, $color-white, 28px);
+  }
+}
+
+.about-me {
+  &__image {
+    padding: 0;
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    padding: 110px 80px 50px 80px;
+    background-color: $color-grey;
+  }
+
+  &__title {
+    @include format-text($font-Montserrat-Medium, 30px, $color-black, 84px);
+  }
+
+  &__desc {
+    @include format-text ($font-Myriad-Pro-Regular, 16px, $color-black, 24px);
+  }
+}
+
+.about-contact {
+  width: 40%;
+  margin: auto;
+  padding: 100px 0;
+
+  &__title {
+    font-family: $font-Myriad-Pro-Regular;
+    font-size: 30px;
+    line-height: 84px;
+  }
+
+  &__desc {
+    font-family: $font-Myriad-Pro-Regular;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 0;
+  }
+
+  &__btn {
+    @include format-text($font-Montserrat-Medium, 12px, $color-white, null);
+    position: relative;
+    border: 0;
+    outline: 0;
+    padding: 12px 40px;
+    font-size: 12px;
+    margin: auto;
+    display: block;
+    overflow: hidden;
+    text-transform: uppercase;
+    z-index: 1;
+    background-color: $color-blue;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      background-color: $color-blue-1;
+      transform: translate(-50%, -50%) scale(0);
+      transition: .3s .2s;
+      z-index: -2;
+      border-radius: 50%;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      background-color: $color-blue-2;
+      transform: translate(-50%, -50%) scale(0);
+      transition: .3s;
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+    &:hover:before {
+      transform: translate(-50%, -50%) scale(1);
+      transition: .3s;
+    }
+
+    &:hover:after {
+      transform: translate(-50%, -50%) scale(1);
+      transition: .3s .2s;
+    }
+  }
+}

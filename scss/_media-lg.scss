@@ -1,0 +1,104 @@
+@media screen and (max-width: $breakpoint-lg) {
+  .banner {
+    top: 50%;
+
+    &__title {
+      @include format-text (null, 25px, null, 40px);
+    }
+
+    &__desc {
+      font-size: 15px;
+      line-height: 18px;
+      margin: 25px 0;
+    }
+
+    &__button {
+      padding: 15px 30px;
+    }
+  }
+
+  .header {
+    &__box {
+      padding: 0 15px;
+
+      .logo {
+        position: absolute;
+        font-size: 15px;
+        top: 6%;
+        opacity: 1;
+      }
+    }
+
+    .menu {
+      position: initial;
+
+      .btn-open {
+        top: 5%;
+        right: 15px;
+        opacity: 1;
+      }
+
+      .hidden {
+        opacity: 0;
+      }
+
+      .show {
+        position: fixed;
+        opacity: 1;
+        right: 0;
+      }
+    }
+
+    .nav {
+      position: fixed;
+      z-index: 999;
+      background-color: $color-grey-1;
+      top: 0;
+      width: 25%;
+      height: 100%;
+      right: -100%;
+      overflow: auto;
+      transition: .5s ease;
+
+      &__item {
+        display: block;
+        padding: 20px 15px;
+
+        &--close {
+          opacity: 1;
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-bottom: 25px;
+    padding-left: 50px;
+  }
+
+  .our-address {
+    padding-left: 50px;
+  }
+
+  .project {
+    $this : '.project';
+
+    &__content {
+      max-height: 520px;
+    }
+
+    &__image {
+      .image {
+        height: 100%;
+      }
+    }
+  }
+
+  .about-me {
+    &__content {
+      padding: 50px;
+    }
+  }
+}

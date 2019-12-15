@@ -1,0 +1,26 @@
+.contact {
+  &__info-title {
+    @include format-text ($font-Montserrat-Medium, 30px, $color-black, 84px);
+  }
+
+  &__info-desc {
+    @include format-text ($font-Myriad-Pro-Regular, 16px, $color-black, 36px);
+  }
+
+  &__info-detail {
+    @include format-text ($font-Myriad-Pro-Regular, 16px, $color-black, 36px);
+  }
+
+  &__btn {
+    &--reset {
+      margin: 0;
+    }
+  }
+
+  .map {
+    width: 100%;
+    height: 470px;
+    border: 0;
+    padding: 0 15px;
+  }
+}

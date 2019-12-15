@@ -1,0 +1,6 @@
+@mixin format-text($family, $size, $color, $line-height) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+  line-height: $line-height;
+}

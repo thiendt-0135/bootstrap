@@ -1,0 +1,602 @@
+body {
+  max-width: 1366px;
+  margin: auto;
+}
+
+.container {
+  max-width: 1170px;
+}
+
+// CSS Header
+
+.header {
+  position: relative;
+  width: 100%;
+  background-image: url('../img/bg-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  padding-top: 50%;
+
+  .image {
+    width: 100%;
+  }
+
+  .wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+  }
+
+  .menu {
+    position: relative;
+
+    .btn-open {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      background-color: transparent;
+      border: 0;
+      outline: none;
+      font-size: 25px;
+      opacity: 0;
+    }
+  }
+}
+
+.nav {
+  $this: '.nav';
+  margin: 0;
+  padding: 0;
+  display: block;
+
+  &__item {
+    display: inline-block;
+    padding: 20px 15px;
+
+    &:hover #{$this}__link {
+      color: $color-blue;
+      text-decoration: none;
+    }
+
+    &--close {
+      opacity: 0;
+    }
+  }
+
+  &__link {
+    @include format-text($font-Montserrat-Medium, 12px, $color-black, 24px);
+    text-transform: uppercase;
+    transition: all .3s ease;
+
+    &--active {
+      color: $color-blue;
+    }
+  }
+}
+
+.banner {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 85px;
+
+  &__title {
+    @include format-text($font-Montserrat-Medium, 38px, $color-black, 48px);
+  }
+
+  &__desc {
+    @include format-text($font-Myriad-Pro-Regular, 18px, $color-black-1, 28px);
+    margin: 40px 0;
+  }
+
+  &__button {
+    @include format-text($font-Montserrat-Medium, 12px, $color-white, null);
+    position: relative;
+    border: 0;
+    outline: 0;
+    padding: 19px 50px;
+    overflow: hidden;
+    text-transform: uppercase;
+    z-index: 1;
+    background-color: $color-blue;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      background-color: $color-blue-1;
+      transform: translate(-50%, -50%) scale(0);
+      transition: .3s .2s;
+      z-index: -2;
+      border-radius: 50%;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      background-color: $color-blue-2;
+      transform: translate(-50%, -50%) scale(0);
+      transition: .3s;
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+    &:hover:before {
+      transform: translate(-50%, -50%) scale(1);
+      transition: .3s;
+    }
+
+    &:hover:after {
+      transform: translate(-50%, -50%) scale(1);
+      transition: .3s .2s;
+    }
+  }
+}
+
+.about-us {
+  width: 43%;
+  margin: 90px auto;
+  text-align: center;
+  background-color: $color-white;
+
+  &__title {
+    display: block;
+  }
+
+  &__desc {
+    @include format-text ($font-NunitoSans-Regular, 16px , null, 26px);
+    padding: 30px 0;
+  }
+
+  &__signature {
+    display: block;
+  }
+}
+
+// CSS Skill
+
+.skill {
+  background-color: $color-grey;
+
+  &__content {
+    overflow: hidden;
+    padding: 155px 85px 0 98px;
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__value {
+    width: 100%;
+    height: 3px;
+    margin-bottom: 30px;
+    background-color: $color-grey-2;
+
+    &::-webkit-progress-value {
+      background: $color-blue;
+      transition: all .8s linear;
+    }
+  }
+
+  &__info {
+    @include format-text ($font-Montserrat-Medium, 12px, null, 30px);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  &__image {
+    width: 100%;
+    padding: 0;
+
+    .image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// CSS Numbers
+
+.numbers {
+  $this : '.numbers';
+  background-color: $color-blue;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 95px 0;
+  }
+
+  &__icon {
+    font-size: 48px;
+    padding-right: 15px;
+    color: $color-white;
+  }
+
+  &__total {
+    @include format-text ($font-Montserrat-Medium, 12px, $color-white, null);
+    margin: 0;
+  }
+
+  &__info {
+    @include format-text ($font-Montserrat-Medium, 12px, $color-white, null);
+    margin: 0;
+  }
+}
+
+// CSS Work
+
+.work {
+  $this: '.work';
+  cursor: pointer;
+  background-color: $color-grey-1;
+  transition: all .3s ease;
+
+  &__item {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+
+    &:before {
+      top: 0;
+      left: 0;
+      content: '';
+      position: absolute;
+      display: block;
+      background-color: black;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all .3s ease .2s;
+    }
+
+    &:hover #{$this}__icon {
+      opacity: 1;
+    }
+
+    &:hover:before {
+      opacity: .8;
+      transform: translateY(0);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: $color-white;
+    opacity: 0;
+    z-index: 1;
+    transition: all .3s ease;
+  }
+
+  &__load-more {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  &__image {
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover + #{$this}__icon {
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    @include format-text ($font-Montserrat-Medium, 12px, $color-black, null);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $color-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+// CSS Our Work Process
+
+.our-work-process {
+  &__title {
+    @include format-text ($font-Myriad-Pro-Regular, 30px, $color-black, 60px);
+    text-align: center;
+    margin: 75px auto 14px;
+  }
+
+  &__desc {
+    @include format-text ($font-Myriad-Pro-Regular, 16px, $color-black-1, 24px);
+    width: 460px;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__video {
+    margin-top: 52px;
+    position: relative;
+
+    .hidden {
+      display: none;
+    }
+
+    .play-icon {
+      position: absolute;
+      color: $color-white;
+      background-color: $color-blue;
+      width: 85px;
+      height: 85px;
+      border: 0;
+      outline: 0;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+
+    .video {
+      width: 100%;
+    }
+  }
+}
+
+// CSS Service
+
+.service {
+  $this : '.service';
+  padding: 102px 0 75px 0;
+
+  &__item {
+    text-align: center;
+    padding: 20px 25px;
+
+    &-title {
+      @include format-text ($font-Myriad-Pro-Regular, 12px, null, 30px);
+      text-transform: uppercase;
+      transition: all .3s ease;
+    }
+
+    &-desc {
+      @include format-text ($font-Myriad-Pro-Regular, 16px, $color-black-1, 24px);
+      transition: all .3s ease;
+    }
+
+    &:hover #{$this}__link {
+      color: $color-blue;
+      text-decoration: none;
+    }
+
+    &:hover &-desc {
+      color: $color-blue;
+    }
+
+    &:hover &-title {
+      color: $color-blue;
+    }
+  }
+
+  &__link {
+    color: $color-black;
+    transition: all .3s ease;
+  }
+
+  &__icon {
+    font-size: 48px;
+  }
+}
+
+// CSS Testimonials
+
+.testimonials {
+  $this : '.testimonials';
+  background-color: $color-blue;
+  padding-bottom: 50px;
+
+  .carousel {
+    &__item {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .active {
+    #{$this}__detail {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .carousel-indicators {
+    display: flex;
+    align-items: center;
+
+    .active {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  }
+
+  &__detail {
+    width: 40%;
+    margin: auto;
+    padding: 170px 0;
+    transition: all .5s ease;
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  &__desc {
+    @include format-text ($font-Montserrat-Medium, 16px, $color-white, 36px);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__author {
+    @include format-text ($font-Montserrat-Medium, 12px, $color-white, null);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+// CSS Clients
+
+.clients {
+  background-color: $color-white;
+
+  &__item {
+    text-align: center;
+    padding: 60px 15px;
+  }
+}
+
+.wrapper {
+  width: 50%;
+}
+
+// CSS Form Contact
+
+.contact {
+  background-color: $color-grey-1;
+  padding-bottom: 55px;
+  margin: auto;
+
+  &__title {
+    @include format-text ($font-Montserrat-Medium, 30px, null, 84px);
+    text-align: center;
+    padding-top: 76px;
+  }
+
+  &__text {
+    @include format-text ($font-Myriad-Pro-Regular, 16px, $color-black-1, 24px);
+    width: 75%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .input {
+    padding: 13px 25px;
+    border: 0;
+    outline: 0;
+    background-color: $color-white;
+  }
+
+  &__form {
+    padding-bottom: 50px;
+
+    &-group {
+      display: flex;
+      margin: 34px 0;
+    }
+
+    .input-name {
+      width: 50%;
+      margin-right: 15px;
+    }
+
+    .input-email {
+      width: 50%;
+      margin-left: 15px;
+    }
+
+    .input-title {
+      width: 100%;
+    }
+
+    .comment {
+      width: 100%;
+      margin: 25px 0;
+      height: 170px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: block;
+    margin: auto;
+    background-color: $color-blue;
+    border: 0;
+    outline: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    color: $color-white;
+    overflow: hidden;
+    z-index: 1;
+    box-sizing: border-box;
+
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      background-color: $color-blue-1;
+      transform: translate(-50%, -50%) scale(0);
+      transition: .3s .2s;
+      z-index: -2;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 200px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      background-color: $color-blue-2;
+      transform: translate(-50%, -50%) scale(0);
+      transition: .3s;
+      z-index: -1;
+      border-radius: 50%;
+    }
+
+    &:hover:before {
+      transform: translate(-50%, -50%) scale(1);
+      transition: .3s;
+    }
+
+    &:hover:after {
+      transform: translate(-50%, -50%) scale(1);
+      transition: .3s .2s;
+    }
+  }
+}

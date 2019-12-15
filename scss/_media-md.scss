@@ -1,0 +1,104 @@
+@media screen and (max-width: $breakpoint-md) {
+  .banner {
+    top: 50%;
+    padding: 0 65px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__desc {
+      font-size: 15px;
+      margin: 15px 0;
+    }
+
+    &__button {
+      padding: 10px 15px;
+    }
+  }
+
+  .skill {
+    &__content {
+      padding: 50px;
+    }
+  }
+
+  .numbers {
+    &__item {
+      padding: 50px 15px;
+    }
+  }
+
+  .work {
+    &__item {
+      padding: 15px;
+
+      &:before {
+        padding: 15px;
+        background-clip: content-box;
+      }
+    }
+  }
+
+  .testimonials {
+    &__detail {
+      width: 50%;
+      padding: 80px 15px;
+    }
+  }
+
+  .wrapper {
+    width: 60%;
+    padding-bottom: 0;
+  }
+
+  .about-banner {
+    &__content {
+      width: 100%;
+    }
+
+    &__title {
+      @include format-text ($font-Myriad-Pro-Regular, 20px, $color-white, 20px);
+    }
+
+    &__desc {
+      @include format-text ($font-Myriad-Pro-Regular, 15px, $color-white, 20px);
+    }
+  }
+
+  .about-me {
+    &__content {
+      padding: 100px;
+      background-color: $color-grey;
+    }
+  }
+
+  .project {
+    $this : '.project';
+
+    &__title {
+      @include format-text ($font-Myriad-Pro-Regular, 25px, $color-black, 45px);
+    }
+
+    &__text {
+      @include format-text ($font-Myriad-Pro-Regular, 12px, $color-black, 20px);
+    }
+
+    &__info {
+      @include format-text ($font-NunitoSans-Regular, 12px, $color-black, 15px);
+    }
+
+    &__content {
+      max-height: 400px;
+      padding: 15px;
+    }
+
+    &__image {
+      max-height: 400px;
+
+      .image {
+        height: 100%;
+      }
+    }
+  }
+}

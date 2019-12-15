@@ -1,0 +1,160 @@
+@media screen and (max-width: $breakpoint-sm) {
+  .header {
+    &-common {
+      .nav {
+        &__item {
+          padding: 20px 5px;
+        }
+      }
+    }
+  }
+
+  .banner {
+    top: 50%;
+    padding: 0 40px;
+
+    &__title {
+      font-size: 15px;
+    }
+
+    &__desc {
+      @include format-text (null, 15px, null, 18px);
+      margin: 15px 0;
+    }
+
+    &__button {
+      padding: 8px 10px;
+    }
+  }
+
+  .skill {
+    &__content {
+      padding: 50px 15px;
+    }
+  }
+
+  .our-work-process {
+    &__desc {
+      width: 300px;
+    }
+  }
+
+  .numbers {
+    &__item {
+      padding: 40px 0;
+    }
+  }
+
+  .service {
+    padding: 50px 0;
+  }
+
+  .testimonials {
+    &__detail {
+      width: 50%;
+      padding: 50px 0;
+    }
+
+    &__desc {
+      font-size: 13px;
+    }
+
+    &__author {
+      font-size: 10px;
+    }
+  }
+
+  .clients {
+    &__item {
+      padding: 30px 15px;
+    }
+  }
+
+  .wrapper {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .contact {
+    &__title {
+      padding-top: 50px;
+    }
+
+    &__form-group {
+      display: block;
+
+      .input-name {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .input-email {
+        width: 100%;
+        margin-left: auto;
+      }
+    }
+
+    .comment {
+      height: 120px;
+    }
+
+    &__btn {
+      &--reset {
+        margin: auto;
+      }
+    }
+  }
+
+  .about-me {
+    &__content {
+      padding: 50px 15px;
+      background-color: $color-grey;
+    }
+  }
+
+  .about-contact {
+    width: 100%;
+  }
+
+  .project {
+    .btn-control {
+      font-size: 7px;
+    }
+
+    &__content {
+      max-height: 400px;
+      padding: 20px 15px;
+    }
+
+    &__image {
+      max-height: 400px;
+      position: relative;
+
+      &-wrap {
+        margin-left: 0;
+
+        .image {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    }
+
+    &__title {
+      @include format-text ($font-Myriad-Pro-Regular, 25px, $color-black, 45px);
+    }
+
+    &__text {
+      @include format-text ($font-Myriad-Pro-Regular, 12px, $color-black, 20px);
+    }
+
+    &__info {
+      @include format-text ($font-NunitoSans-Regular, 12px, $color-black, 15px);
+    }
+  }
+
+  .footer {
+    font-size: 15px;
+    padding: 50px 15px;
+  }
+}
