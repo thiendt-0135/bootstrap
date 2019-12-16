@@ -1,0 +1,124 @@
+@media screen and (max-width: $breakpoint-xs) {
+  .header {
+    .menu {
+      .nav {
+        &__item {
+          padding: 5px 15px;
+        }
+
+        &__link {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+
+  .banner {
+    top: 60%;
+    padding: 0 10px;
+
+    &__title {
+      font-size: 11px;
+      line-height: 10px;
+    }
+
+    &__desc {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+
+    &__button {
+      padding: 3px 3px;
+      font-size: 5px;
+    }
+  }
+
+  .about-us {
+    width: 100%;
+    margin: 50px auto;
+
+    &__title {
+      font-size: 25px;
+    }
+
+    &__desc {
+      font-size: 13px;
+      padding: 5px 15px;
+    }
+  }
+
+  .skill {
+    &__content {
+      width: 100%;
+      padding: 15px;
+    }
+
+    &__title {
+      font-size: 25px;
+    }
+
+    &__info {
+      font-size: 10px;
+    }
+  }
+
+  .numbers {
+    &__item {
+      padding: 40px 0;
+    }
+  }
+
+  .our-work-process {
+    &__title {
+      font-size: 25px;
+    }
+
+    &__desc {
+      font-size: 12px;
+    }
+  }
+
+  .service {
+    padding: 50px 0;
+
+    &__item-desc {
+      font-size: 14px;
+    }
+  }
+
+  .testimonials {
+    &__detail {
+      width: 100%;
+      padding: 50px 0;
+    }
+
+    &__desc {
+      font-size: 13px;
+    }
+  }
+
+  .clients {
+    &__item {
+      padding: 30px 15px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .contact {
+    &__title {
+      padding-top: 30px;
+    }
+  }
+
+  .footer {
+    font-size: 13px;
+    padding: 20px 0;
+
+    .copyright {
+      font-size: 13px;
+    }
+  }
+}
