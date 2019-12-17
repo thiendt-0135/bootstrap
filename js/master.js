@@ -3,7 +3,7 @@
 
 // eslint-disable-next-line require-jsdoc
 function playVideoOnscroll() {
-  var checkClass = document.querySelector('.js-video');
+  var checkClass = $('.js-video');
   if (checkClass !== null) {
     const videoTop = $('.js-video').offset().top;
     const scrollTop = window.scrollY;

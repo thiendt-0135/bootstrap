@@ -821,12 +821,21 @@ body {
   padding: 0 15px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .footer {
-  font-family: "Montserrat-Medium";
+  font-family: "NunitoSans-Regular";
   font-size: 18px;
   color: #fff;
   background-color: #000;
   padding: 90px 0;
+}
+.footer__title {
+  font-family: "Montserrat-Medium";
+  font-size: 18px;
+  font-weight: 800;
 }
 .footer .list {
   list-style-type: none;
@@ -835,6 +844,7 @@ body {
   color: #fff;
   text-decoration: none;
   transition: all 0.3s ease;
+  text-transform: capitalize;
 }
 .footer .list__link:hover {
   color: #10c9c3;
@@ -1215,6 +1225,10 @@ body {
   }
   .our-work-process__desc {
     font-size: 12px;
+  }
+  .our-work-process .play-icon {
+    width: 50px;
+    height: 50px;
   }
 
   .service {
