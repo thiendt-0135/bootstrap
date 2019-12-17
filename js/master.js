@@ -73,7 +73,6 @@ $('.js-slide-project').slick({
   fade: true,
   speed: 900,
   infinite: true,
-  cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
   nextArrow: '.prev-arrow',
   prevArrow: '.next-arrow',
   dots: true,
